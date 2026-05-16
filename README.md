@@ -76,3 +76,7 @@ Contoh tampilan hasil konfigurasi (klik untuk memperbesar):
 
 	![mini player cover](conf/conky-mini-playerctl/default-cover.png)
 
+- Full display example:
+
+	![display example](Display.png)
+
