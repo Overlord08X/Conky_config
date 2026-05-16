@@ -55,3 +55,24 @@ Proyek ini dilisensikan di bawah MIT License — lihat file `LICENSE`.
 Kontribusi
 
 Pull request dan issue diterima. Tambahkan `CONTRIBUTING.md` jika ingin aturan kontribusi khusus.
+
+Screenshots
+
+Contoh tampilan hasil konfigurasi (klik untuk memperbesar):
+
+- Calendar:
+
+	![conky calendar](conf/conky-calendar/conkyrc-calendar.png)
+
+- Clock:
+
+	![conky clock](conf/conky-clock/conkyrc-clock.png)
+
+- Exploded view background:
+
+	![exploded view background](conf/conky-exploded-view/bg.png)
+
+- Mini player cover example:
+
+	![mini player cover](conf/conky-mini-playerctl/default-cover.png)
+
