@@ -58,25 +58,7 @@ Pull request dan issue diterima. Tambahkan `CONTRIBUTING.md` jika ingin aturan k
 
 Screenshots
 
-Contoh tampilan hasil konfigurasi (klik untuk memperbesar):
+Full display example:
 
-- Calendar:
-
-	![conky calendar](conf/conky-calendar/conkyrc-calendar.png)
-
-- Clock:
-
-	![conky clock](conf/conky-clock/conkyrc-clock.png)
-
-- Exploded view background:
-
-	![exploded view background](conf/conky-exploded-view/bg.png)
-
-- Mini player cover example:
-
-	![mini player cover](conf/conky-mini-playerctl/default-cover.png)
-
-- Full display example:
-
-	![display example](Display.png)
+![display example](Display.png)
 
