@@ -1,0 +1,27 @@
+# Ignore macOS Finder files
+.DS_Store
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Environment / secrets
+.env
+
+# General caches / backups
+.cache/
+*.bak

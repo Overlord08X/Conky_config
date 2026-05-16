@@ -1,0 +1,40 @@
+-- RSS Reader - Arch Linux
+-- Menggunakan exec curl karena conky standar tidak support ${rss}
+
+conky.config = {
+    background = false,
+    font = 'FiraCode Nerd Font:pixelsize=10',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 300,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'desktop',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_colour = '#00000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_left',
+    gap_x = 800,
+    gap_y = 200,
+    use_spacer = 'none',
+    uppercase = false,
+};
+
+conky.text = [[
+─ > RSS ANTARA NEWS ──────────────────────────────────────────────────────
+${execi 300 curl -s --max-time 10 "https://rss.antaranews.com/rss/terkini.xml" 2>/dev/null | grep -oP '(?<=<title>)[^<]+' | sed '1d' | head -20 | sed 's/^/  /' || echo "  RSS tidak tersedia"}
+─────────────────────────────────────────────────────────────────────────
+]];

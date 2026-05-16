@@ -1,0 +1,53 @@
+-- Media player for conky
+-- Menggunakan playerctl (support Spotify, Firefox, VLC, dll)
+
+conky.config = {
+    background = false,
+    font = 'FiraCode Nerd Font:pixelsize=12',
+    use_xft = true,
+    xftalpha = 1.0,
+    update_interval = 2,
+    total_run_times = 0,
+    own_window = true,
+    own_window_transparent = true,
+    own_window_type = 'desktop',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_colour = '#00000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = true,
+    stippled_borders = 0,
+    border_width = 0,
+    default_color = '#BEC8CB',
+    default_shade_color = '#BEC8CB',
+    default_outline_color = '#BEC8CB',
+    alignment = 'top_left',
+    gap_x = 70,
+    gap_y = 100,
+    use_spacer = 'none',
+    text_buffer_size = 512,
+    minimum_width = 420,
+    minimum_height = 120,
+    imlib_cache_size = 0,
+};
+
+conky.text = [[
+${execi 1 bash ~/.config/conky/conf/conky-mini-playerctl/get-cover.sh}${image /tmp/conky-cover.png -p 0,60 -s 100x100}
+${offset 120}NOW PLAYING
+${offset 120}────────────────────────────
+${offset 120}PLAYER :
+${offset 120}${exec playerctl -l 2>/dev/null | head -1 | sed 's/\..*//'}
+${offset 120}TITLE :
+${offset 120}${exec playerctl metadata title 2>/dev/null}
+${offset 120}ARTIST :
+${offset 120}${exec playerctl metadata artist 2>/dev/null}
+${offset 120}ALBUM :
+${offset 120}${exec playerctl metadata album 2>/dev/null}
+${offset 120}STATUS :
+${offset 120}${exec playerctl status 2>/dev/null}
+]];
